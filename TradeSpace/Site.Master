@@ -1,0 +1,116 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TradeSpace.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <%--bootstrap css--%>
+    <link href="bootsrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="dataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome css--%>
+    <link href="fontAwesome/css/all.css" rel="stylesheet" />
+
+    <%--custom css--%>
+    <link href="css/customCss.css" rel="stylesheet" />
+
+    <%--jquery--%>
+    <script src="bootsrap/js/jquery-3.3.1.slim.min.js"></script>
+    <%--popper js--%>
+    <script src="bootsrap/js/popper.min.js"></script>
+    <%--Boostrap js--%>
+    <script src="bootsrap/js/bootstrap.min.js"></script>
+    <%--DataTables js--%>
+    <script src="dataTables/js/jquery.dataTables.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div>
+            <header>
+                <div>
+                    <nav class="navbar navbar-expand-md  navbar-light bg-white border-bottom">
+
+                        <a class="navbar-brand" href="homepage.aspx">
+                            <img src="imgs/logo.png" width="150" height="50" />
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto nav-pills">
+                                <li class="nav-item active dropdown">
+
+                                    <a class="nav-link btn-outline-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Countries&nbsp;</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="america.aspx">United States</a>
+                                        <a class="dropdown-item" href="nigeria.aspx">Nigeria</a>
+                                        <a class="dropdown-item" href="Mexico.aspx">Mexico</a>
+                                        <div class="dropdown-divider"></div>
+                                        <asp:LinkButton ID="LinkButtonMore" href="homepage.aspx" runat="server"><i class="pl-1 fa-sharp fa-regular fa-square-plus fa-2xl"></i></asp:LinkButton>
+
+
+                                    </div>
+                                </li>
+                                <li class="nav-item active">
+
+                                    <a class="nav-link" role="tab">News</a></li>
+                            </ul>
+
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link">Login</a>
+                                </li>
+
+                                <li class="nav-item active">
+                                    <a class="nav-link">Sign Up</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </nav>
+                </div>
+
+            </header>
+
+        </div>
+
+
+
+
+        <!-- Main Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+        <!-- Footer -->
+
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    </div>
+
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color: darkolivegreen"><a href="#" target="_blank">&copy Andabe</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- ./Footer -->
+    </form>
+</body>
+</html>
